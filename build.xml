@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project name="Cooolis-ms-C-Plus-Plus" default="build" basedir=".">
+
+    <!-- Define properties -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="bin.dir" value="bin"/>
+    <property name="compiler" value="g++"/>
+    <property name="output" value="${bin.dir}/cooolis"/>
+
+    <!-- Initialize directories -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${bin.dir}"/>
+    </target>
+
+    <!-- Build target -->
+    <target name="build">
+        <echo message="Build completed. Binary located at ${output}"/>
+    </target>
+
+    <!-- Clean target -->
+    <target name="clean">
+        <echo message="Cleaning up..."/>
+        <delete dir="${build.dir}"/>
+        <delete dir="${bin.dir}"/>
+    </target>
+
+</project>
